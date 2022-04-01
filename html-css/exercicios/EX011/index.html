@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Imagens</title>
+</head>
+<body>
+    <h1>Imagem dinamica</h1>
+    <p>tente abriri esse site em vário dispositivos diferentes, ou tente variar o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px )" srcset="imagens/foto-P.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-M.png" type="image/png">
+        <img src="imagens/foto-G.png" alt="imagem flexivel">
+    </picture>
+    <!--USO DO PICTURE PARA FAZER IMAGENS FLEXIVEIS,PARA PODER MEXER NAS IMAGENS, PARA QUE QUANDO ALTERAMOS O TAMNHO DA TELA A IMAGEM TAMBÊM IRÁ VARIAR-->
+    <!--Ficar atento com a ordem dos source para que ele possa funcionar de forma correta.-->
+
+    <h1>Trabalhandso com Áudio</h1>
+    <p>vamos aprender a reproduzir áudio no html5</p>
+    <audio src="midia/Believe_-_NEFFEX.mp3" controls autoplay></audio>
+
+    <!--Para adicionarmos um áudio em nosso site basta uisarmos a tag audio com src e o nome da música/arquivo que deve ser executado.-->
+    <!--Parametros que podemos adicionar nessa tag são o controls, o qual apresenta um display de música onde podemos: pausar, iniciar, aumentar e diminuir o volume além de avançar ou retroceder-->
+    <!--Outro parametro que utilizamos tbm é o autoplay, que faz com que a música já inicie tocando em seu navegador./dependendo da compatibilidade do navegador para seu funcionamento.-->
+
+    <!--Outra forma que podemos utilizar para adicionarmos um audio no navegador.-->
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/Believe_-_NEFFEX.mp3" type="audio/mpeg">
+        <source src="midia/Believe_-_NEFFEX.mp3" type="audio/ogg">
+        <source src="midia/Believe_-_NEFFEX.mp3" type="audio/wav">
+        <p>Seu navegador não suporta para reprodução de audio, caso queira pode baixar o arquivo <a href="midia/Believe_-_NEFFEX.mp3">aqui</a></p>
+
+    </audio>
+
+    <h1>Vídeos hospedado localmente</h1>
+
+    <p>esse vídeo está hospedado no meu próprio servidor</p>
+    <p>é um jeito caro de colocar vídeos</p>
+    <video width="400" poster="videos/foto-P.png" src="videos/pexels-beytlik-9959514.mp4" controls autoplay></video>
+
+    <h1>videos hospedados no youtube</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2sj2iQyBTQs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>
